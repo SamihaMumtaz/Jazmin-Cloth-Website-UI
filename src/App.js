@@ -1,0 +1,529 @@
+import './App.css';
+import TopNavbar from './Components/TopNavbar';
+import Navbar from './Components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Components/Page component/Home';
+import Footer from './Components/Footer';
+import ContactUs from './Components/Sub components/Footer/ContactUs';
+import Faq from './Components/Sub components/Footer/Faq';
+import Stitching from './Components/Sub components/Footer/Stitching';
+import Shipping from './Components/Sub components/Footer/Shipping';
+import PakistanShipping from './Components/Sub components/Footer/PakistanShipping';
+import GiftPack from './Components/Sub components/Footer/GiftPack';
+import Blog from './Components/Sub components/Footer/Blog';
+import Privacy from './Components/Sub components/Footer/Privacy';
+import Refund from './Components/Sub components/Footer/Refund';
+import ShippingPolicy from './Components/Sub components/Footer/ShippingPolicy';
+import Terms from './Components/Sub components/Footer/Terms';
+import Login from './Components/Sub components/Navbar/Login';
+import Cart from './Components/Sub components/Navbar/Cart';
+import Search from './Components/Sub components/Navbar/Search';
+import Velvet from './Components/Page component/Velvet';
+import Unstitched from './Components/Page component/Unstitched';
+import DeliaFallWinter from './Components/Page component/DeliaFallWinter';
+import ReadyToWear from './Components/Page component/ReadyToWear';
+import Formals from './Components/Page component/Formals';
+import Sale from './Components/Page component/Sale';
+import Featured from './Components/Sub components/DeliaFallWinter/Featured';
+import BestSelling from './Components/Sub components/DeliaFallWinter/BestSelling';
+import AtoZ from './Components/Sub components/DeliaFallWinter/AtoZ';
+import ZtoA from './Components/Sub components/DeliaFallWinter/ZtoA';
+import LowtoHigh from './Components/Sub components/DeliaFallWinter/LowtoHigh';
+import HightoLow from './Components/Sub components/DeliaFallWinter/HightoLow';
+import OldtoNew from './Components/Sub components/DeliaFallWinter/OldtoNew';
+import NewtoOld from './Components/Sub components/DeliaFallWinter/NewtoOld';
+import VelvetFeatured from './Components/Sub components/Velvet/VelvetFeatured';
+import VelvetBestselling from './Components/Sub components/Velvet/VelvetBestselling';
+import VelvetAtoZ from './Components/Sub components/Velvet/VelvetAtoZ';
+import VelvetZtoA from './Components/Sub components/Velvet/VelvetZtoA';
+import VelvetLowtoHigh from './Components/Sub components/Velvet/VelvetLowtoHigh';
+import VelvetHightoLow from './Components/Sub components/Velvet/VelvetHightoLow';
+import VelvetOldtoNew from './Components/Sub components/Velvet/VelvetOldtoNew';
+import VelvetNewtoOld from './Components/Sub components/Velvet/VelvetNewtoOld';
+import UnstitchedFeatured from './Components/Sub components/UnstitchedWinter/UnstitchedFeatured';
+import UnstitchedBestselling from './Components/Sub components/UnstitchedWinter/UnstitchedBestselling';
+import UnstitchedAtoZ from './Components/Sub components/UnstitchedWinter/UnstitchedAtoZ';
+import UnstitchedZtoA from './Components/Sub components/UnstitchedWinter/UnstitchedZtoA';
+import UnstitchedLowtoHigh from './Components/Sub components/UnstitchedWinter/UnstitchedLowtoHigh';
+import UnstitchedHightoLow from './Components/Sub components/UnstitchedWinter/UnstitchedHightoLow';
+import UnstitchedOldtoNew from './Components/Sub components/UnstitchedWinter/UnstitchedOldtoNew';
+import UnstitchedNewtoOld from './Components/Sub components/UnstitchedWinter/UnstitchedNewtoOld';
+import ReadyFeatured from './Components/Sub components/ReadyToWear/ReadyFeatured';
+import ReadyBestselling from './Components/Sub components/ReadyToWear/ReadyBestselling';
+import ReadyAtoZ from './Components/Sub components/ReadyToWear/ReadyAtoZ';
+import ReadyZtoA from './Components/Sub components/ReadyToWear/ReadyZtoA';
+import ReadyLowtoHigh from './Components/Sub components/ReadyToWear/ReadyLowtoHigh';
+import ReadyHightoLow from './Components/Sub components/ReadyToWear/ReadyHightoLow';
+import ReadyOldtoNew from './Components/Sub components/ReadyToWear/ReadyOldtoNew';
+import ReadyNewtoOld from './Components/Sub components/ReadyToWear/ReadyNewtoOld';
+import FormalsFeatured from './Components/Sub components/Formals/FormalsFeatured';
+import FormalsBestselling from './Components/Sub components/Formals/FormalsBestselling';
+import FormalsAtoZ from './Components/Sub components/Formals/FormalsAtoZ';
+import FormalsZtoA from './Components/Sub components/Formals/FormalsZtoA';
+import FormalsLowtoHigh from './Components/Sub components/Formals/FormalsLowtoHigh';
+import FormalsHightoLow from './Components/Sub components/Formals/FormalsHightoLow';
+import FormalsOldtoNew from './Components/Sub components/Formals/FormalsOldtoNew';
+import FormalsNewtoOld from './Components/Sub components/Formals/FormalsNewtoOld';
+import SaleFeatured from './Components/Sub components/Sale/SaleFeatured';
+import SaleBestselling from './Components/Sub components/Sale/SaleBestselling';
+import SaleAtoZ from './Components/Sub components/Sale/SaleAtoZ';
+import SaleZtoA from './Components/Sub components/Sale/SaleZtoA';
+import SaleLowtoHigh from './Components/Sub components/Sale/SaleLowtoHigh';
+import SaleHightoLow from './Components/Sub components/Sale/SaleHightoLow';
+import SaleOldtoNew from './Components/Sub components/Sale/SaleOldtoNew';
+import SaleNewtoOld from './Components/Sub components/Sale/SaleNewtoOld';
+import DeliaImg1 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg1';
+import DeliaImg2 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg2';
+import DeliaImg3 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg3';
+import DeliaImg4 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg4';
+import DeliaImg5 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg5';
+import DeliaImg6 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg6';
+import DeliaImg7 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg7';
+import DeliaImg8 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg8';
+import DeliaImg9 from './Components/Sub components/DeliaFallWinter/ImageSection/DeliaImg9';
+import VelvetImg1 from './Components/Sub components/Velvet/ImageSection/VelvetImg1';
+import VelvetImg2 from './Components/Sub components/Velvet/ImageSection/VelvetImg2';
+import VelvetImg3 from './Components/Sub components/Velvet/ImageSection/VelvetImg3';
+import VelvetImg4 from './Components/Sub components/Velvet/ImageSection/VelvetImg4';
+import VelvetImg5 from './Components/Sub components/Velvet/ImageSection/VelvetImg5';
+import VelvetImg6 from './Components/Sub components/Velvet/ImageSection/VelvetImg6';
+import VelvetImg7 from './Components/Sub components/Velvet/ImageSection/VelvetImg7';
+import VelvetImg8 from './Components/Sub components/Velvet/ImageSection/VelvetImg8';
+import VelvetImg9 from './Components/Sub components/Velvet/ImageSection/VelvetImg9';
+import VelvetImg10 from './Components/Sub components/Velvet/ImageSection/VelvetImg10';
+import VelvetImg11 from './Components/Sub components/Velvet/ImageSection/VelvetImg11';
+import VelvetImg12 from './Components/Sub components/Velvet/ImageSection/VelvetImg12';
+import VelvetImg13 from './Components/Sub components/Velvet/ImageSection/VelvetImg13';
+import VelvetImg14 from './Components/Sub components/Velvet/ImageSection/VelvetImg14';
+import VelvetImg15 from './Components/Sub components/Velvet/ImageSection/VelvetImg15';
+import VelvetImg16 from './Components/Sub components/Velvet/ImageSection/VelvetImg16';
+import VelvetImg17 from './Components/Sub components/Velvet/ImageSection/VelvetImg17';
+import VelvetImg18 from './Components/Sub components/Velvet/ImageSection/VelvetImg18';
+import VelvetImg19 from './Components/Sub components/Velvet/ImageSection/VelvetImg19';
+import VelvetImg20 from './Components/Sub components/Velvet/ImageSection/VelvetImg20';
+import VelvetImg21 from './Components/Sub components/Velvet/ImageSection/VelvetImg21';
+import VelvetImg22 from './Components/Sub components/Velvet/ImageSection/VelvetImg22';
+import VelvetImg23 from './Components/Sub components/Velvet/ImageSection/VelvetImg23';
+import VelvetImg24 from './Components/Sub components/Velvet/ImageSection/VelvetImg24';
+import VelvetImg25 from './Components/Sub components/Velvet/ImageSection/VelvetImg25';
+import VelvetImg26 from './Components/Sub components/Velvet/ImageSection/VelvetImg26';
+import VelvetImg27 from './Components/Sub components/Velvet/ImageSection/VelvetImg27';
+import VelvetImg28 from './Components/Sub components/Velvet/ImageSection/VelvetImg28';
+import VelvetImg29 from './Components/Sub components/Velvet/ImageSection/VelvetImg29';
+import UnstitchedImg1 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg1';
+import UnstitchedImg2 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg2';
+import UnstitchedImg3 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg3';
+import UnstitchedImg4 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg4';
+import UnstitchedImg5 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg5';
+import UnstitchedImg6 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg6';
+import UnstitchedImg7 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg7';
+import UnstitchedImg8 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg8';
+import UnstitchedImg9 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg9';
+import UnstitchedImg10 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg10';
+import UnstitchedImg11 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg11';
+import UnstitchedImg12 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg12';
+import UnstitchedImg13 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg13';
+import UnstitchedImg14 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg14';
+import UnstitchedImg15 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg15';
+import UnstitchedImg16 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg16';
+import UnstitchedImg17 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg17';
+import UnstitchedImg18 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg18';
+import UnstitchedImg19 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg19';
+import UnstitchedImg20 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg20';
+import UnstitchedImg21 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg21';
+import UnstitchedImg22 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg22';
+import UnstitchedImg23 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg23';
+import UnstitchedImg24 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg24';
+import UnstitchedImg25 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg25';
+import UnstitchedImg26 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg26';
+import UnstitchedImg27 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg27';
+import UnstitchedImg28 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg28';
+import UnstitchedImg29 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg29';
+import UnstitchedImg30 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg30';
+import UnstitchedImg31 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg31';
+import UnstitchedImg32 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg32';
+import UnstitchedImg33 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg33';
+import UnstitchedImg34 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg34';
+import UnstitchedImg35 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg35';
+import UnstitchedImg36 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg36';
+import UnstitchedImg37 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg37';
+import UnstitchedImg38 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg38';
+import UnstitchedImg39 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg39';
+import UnstitchedImg40 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg40';
+import UnstitchedImg41 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg41';
+import UnstitchedImg42 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg42';
+import UnstitchedImg43 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg43';
+import UnstitchedImg44 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg44';
+import UnstitchedImg45 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg45';
+import UnstitchedImg46 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg46';
+import UnstitchedImg47 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg47';
+import UnstitchedImg48 from './Components/Sub components/UnstitchedWinter/ImageSection/UnstitchedImg48';
+import ReadyImg1 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg1';
+import ReadyImg2 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg2';
+import ReadyImg3 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg3';
+import ReadyImg4 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg4';
+import ReadyImg5 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg5';
+import ReadyImg6 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg6';
+import ReadyImg7 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg7';
+import ReadyImg8 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg8';
+import ReadyImg9 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg9';
+import ReadyImg10 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg10';
+import ReadyImg11 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg11';
+import ReadyImg12 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg12';
+import ReadyImg13 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg13';
+import ReadyImg14 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg14';
+import ReadyImg15 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg15';
+import ReadyImg16 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg16';
+import ReadyImg17 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg17';
+import ReadyImg18 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg18';
+import ReadyImg19 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg19';
+import ReadyImg20 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg20';
+import ReadyImg21 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg21';
+import ReadyImg22 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg22';
+import ReadyImg23 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg23';
+import ReadyImg24 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg24';
+import ReadyImg25 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg25';
+import ReadyImg26 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg26';
+import ReadyImg27 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg27';
+import ReadyImg28 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg28';
+import ReadyImg29 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg29';
+import ReadyImg30 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg30';
+import ReadyImg31 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg31';
+import ReadyImg32 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg32';
+import ReadyImg33 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg33';
+import ReadyImg34 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg34';
+import ReadyImg35 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg35';
+import ReadyImg36 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg36';
+import ReadyImg37 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg37';
+import ReadyImg38 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg38';
+import ReadyImg39 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg39';
+import ReadyImg40 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg40';
+import ReadyImg41 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg41';
+import ReadyImg42 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg42';
+import ReadyImg43 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg43';
+import ReadyImg44 from './Components/Sub components/ReadyToWear/ImageSection/ReadyImg44';
+import FormalImg1 from './Components/Sub components/Formals/ImageSection/FormalImg1';
+import FormalImg2 from './Components/Sub components/Formals/ImageSection/FormalImg2';
+import FormalImg3 from './Components/Sub components/Formals/ImageSection/FormalImg3';
+import FormalImg4 from './Components/Sub components/Formals/ImageSection/FormalImg4';
+import FormalImg5 from './Components/Sub components/Formals/ImageSection/FormalImg5';
+import FormalImg6 from './Components/Sub components/Formals/ImageSection/FormalImg6';
+import FormalImg7 from './Components/Sub components/Formals/ImageSection/FormalImg7';
+import FormalImg8 from './Components/Sub components/Formals/ImageSection/FormalImg8';
+import FormalImg9 from './Components/Sub components/Formals/ImageSection/FormalImg9';
+import FormalImg10 from './Components/Sub components/Formals/ImageSection/FormalImg10';
+import FormalImg11 from './Components/Sub components/Formals/ImageSection/FormalImg11';
+import FormalImg12 from './Components/Sub components/Formals/ImageSection/FormalImg12';
+import FormalImg13 from './Components/Sub components/Formals/ImageSection/FormalImg13';
+import FormalImg14 from './Components/Sub components/Formals/ImageSection/FormalImg14';
+import FormalImg15 from './Components/Sub components/Formals/ImageSection/FormalImg15';
+import FormalImg16 from './Components/Sub components/Formals/ImageSection/FormalImg16';
+import FormalImg17 from './Components/Sub components/Formals/ImageSection/FormalImg17';
+import FormalImg18 from './Components/Sub components/Formals/ImageSection/FormalImg18';
+import FormalImg19 from './Components/Sub components/Formals/ImageSection/FormalImg19';
+import FormalImg20 from './Components/Sub components/Formals/ImageSection/FormalImg20';
+import FormalImg21 from './Components/Sub components/Formals/ImageSection/FormalImg21';
+import FormalImg22 from './Components/Sub components/Formals/ImageSection/FormalImg22';
+import FormalImg23 from './Components/Sub components/Formals/ImageSection/FormalImg23';
+import FormalImg24 from './Components/Sub components/Formals/ImageSection/FormalImg24';
+import FormalImg25 from './Components/Sub components/Formals/ImageSection/FormalImg25';
+import FormalImg26 from './Components/Sub components/Formals/ImageSection/FormalImg26';
+import FormalImg27 from './Components/Sub components/Formals/ImageSection/FormalImg27';
+import FormalImg28 from './Components/Sub components/Formals/ImageSection/FormalImg28';
+import FormalImg29 from './Components/Sub components/Formals/ImageSection/FormalImg29';
+import FormalImg30 from './Components/Sub components/Formals/ImageSection/FormalImg30';
+import FormalImg31 from './Components/Sub components/Formals/ImageSection/FormalImg31';
+import FormalImg32 from './Components/Sub components/Formals/ImageSection/FormalImg32';
+import FormalImg33 from './Components/Sub components/Formals/ImageSection/FormalImg33';
+import FormalImg34 from './Components/Sub components/Formals/ImageSection/FormalImg34';
+import FormalImg35 from './Components/Sub components/Formals/ImageSection/FormalImg35';
+import FormalImg36 from './Components/Sub components/Formals/ImageSection/FormalImg36';
+import FormalImg37 from './Components/Sub components/Formals/ImageSection/FormalImg37';
+import FormalImg38 from './Components/Sub components/Formals/ImageSection/FormalImg38';
+import FormalImg39 from './Components/Sub components/Formals/ImageSection/FormalImg39';
+import FormalImg40 from './Components/Sub components/Formals/ImageSection/FormalImg40';
+import FormalImg41 from './Components/Sub components/Formals/ImageSection/FormalImg41';
+import FormalImg42 from './Components/Sub components/Formals/ImageSection/FormalImg42';
+import FormalImg43 from './Components/Sub components/Formals/ImageSection/FormalImg43';
+import FormalImg44 from './Components/Sub components/Formals/ImageSection/FormalImg44';
+import FormalImg45 from './Components/Sub components/Formals/ImageSection/FormalImg45';
+import FormalImg46 from './Components/Sub components/Formals/ImageSection/FormalImg46';
+import FormalImg47 from './Components/Sub components/Formals/ImageSection/FormalImg47';
+import FormalImg48 from './Components/Sub components/Formals/ImageSection/FormalImg48';
+import SaleImg1 from './Components/Sub components/Sale/ImageSection/SaleImg1';
+import SaleImg2 from './Components/Sub components/Sale/ImageSection/SaleImg2';
+import SaleImg3 from './Components/Sub components/Sale/ImageSection/SaleImg3';
+import SaleImg4 from './Components/Sub components/Sale/ImageSection/SaleImg4';
+import SaleImg5 from './Components/Sub components/Sale/ImageSection/SaleImg5';
+import SaleImg6 from './Components/Sub components/Sale/ImageSection/SaleImg6';
+import SaleImg7 from './Components/Sub components/Sale/ImageSection/SaleImg7';
+import SaleImg8 from './Components/Sub components/Sale/ImageSection/SaleImg8';
+function App() {
+  return (
+    <>
+      <TopNavbar />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Contact-Us' element={<ContactUs />} />
+        <Route path='/FAQ' element={<Faq />} />
+        <Route path='/stitching' element={<Stitching />} />
+        <Route path='/international-shipping' element={<Shipping />} />
+        <Route path='/pakistan-shipping' element={<PakistanShipping />} />
+        <Route path='/gift-packaging' element={<GiftPack />} />
+        <Route path='/blogs' element={<Blog />} />
+        <Route path='/privacy-policy' element={<Privacy />} />
+        <Route path='/refund-policy' element={<Refund />} />
+        <Route path='/shipping-policy' element={<ShippingPolicy />} />
+        <Route path='/terms-of-services' element={<Terms  />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/Velvet' element={<Velvet />} />
+        <Route path='/Unstitched-Winter' element={<Unstitched />} />
+        <Route path='/Delia-Fall-Winter' element={<DeliaFallWinter />} />
+        <Route path='/Ready-to-wear' element={<ReadyToWear />} />
+        <Route path='/Formals' element={<Formals />} />
+        <Route path='/Sale' element={<Sale />} />
+        <Route path='/Featured' element={<Featured />} />
+        <Route path='/Bestselling' element={<BestSelling />} />
+        <Route path='/AtoZ' element={<AtoZ />} />
+        <Route path='/ZtoA' element={<ZtoA />} />
+        <Route path='/LowtoHigh' element={<LowtoHigh />} />
+        <Route path='/HightoLow' element={<HightoLow />} />
+        <Route path='/OldtoNew' element={<OldtoNew />} />
+        <Route path='/NewtoOld' element={<NewtoOld />} />
+        <Route path='/Velvet-Featured' element={<VelvetFeatured />} />
+        <Route path='/Velvet-Bestselling' element={<VelvetBestselling />} />
+        <Route path='/Velvet-AtoZ' element={<VelvetAtoZ />} />
+        <Route path='/Velvet-ZtoA' element={<VelvetZtoA />} />
+        <Route path='/Velvet-LowtoHigh' element={<VelvetLowtoHigh />} />
+        <Route path='/Velvet-HightoLow' element={<VelvetHightoLow />} />
+        <Route path='/Velvet-OldtoNew' element={<VelvetOldtoNew />} />
+        <Route path='/Velvet-NewtoOld' element={<VelvetNewtoOld />} />
+        <Route path='/unstitched-featured' element={<UnstitchedFeatured />} />
+        <Route path='/unstitched-bestselling' element={<UnstitchedBestselling />} />
+        <Route path='/unstitched-AtoZ' element={<UnstitchedAtoZ />} />
+        <Route path='/unstitched-ZtoA' element={<UnstitchedZtoA />} />
+        <Route path='/unstitched-lowtohigh' element={<UnstitchedLowtoHigh />} />
+        <Route path='/unstitched-hightolow' element={<UnstitchedHightoLow />} />
+        <Route path='/unstitched-oldtonew' element={<UnstitchedOldtoNew />} />
+        <Route path='/unstitched-newtoold' element={<UnstitchedNewtoOld />} />
+        <Route path='/ReadyFeatured' element={<ReadyFeatured />} />
+        <Route path='/ReadyBestselling' element={<ReadyBestselling />} />
+        <Route path='/ReadyAtoZ' element={<ReadyAtoZ />} />
+        <Route path='/ReadyZtoA' element={<ReadyZtoA />} />
+        <Route path='/Readylowtohigh' element={<ReadyLowtoHigh />} />
+        <Route path='/Readyhightolow' element={<ReadyHightoLow />} />
+        <Route path='/Readyoldtonew' element={<ReadyOldtoNew />} />
+        <Route path='/Readynewtoold' element={<ReadyNewtoOld />} ></Route>
+        <Route path='/formalsfeatured' element={<FormalsFeatured />} />
+        <Route path='/formalsbestselling' element={<FormalsBestselling />} />
+        <Route path='/formalsAtoZ' element={<FormalsAtoZ />} />
+        <Route path='/formalsZtoA' element={<FormalsZtoA />} />
+        <Route path='/formalslowtohigh' element={<FormalsLowtoHigh />} />
+        <Route path='/formashightolow' element={<FormalsHightoLow />} />
+        <Route path='/formalsoldtonew' element={<FormalsOldtoNew />} />
+        <Route path='/formalsnewtoold' element={<FormalsNewtoOld />} />
+        <Route path='/salefeatured' element={<SaleFeatured />} />
+        <Route path='/salebestselling' element={<SaleBestselling />} />
+        <Route path='/saleAtoZ' element={<SaleAtoZ />} />
+        <Route path='/saleZtoA' element={<SaleZtoA />} />
+        <Route path='/salelowtohigh' element={<SaleLowtoHigh />} />
+        <Route path='/salehightolow' element={<SaleHightoLow />} />
+        <Route path='/saleoldtonew' element={<SaleOldtoNew />} />
+        <Route path='/salenewtoold' element={<SaleNewtoOld />} />
+        <Route path='/product/:deliaimg1' element={<DeliaImg1 />} />
+        <Route path='/deliaimg2' element={<DeliaImg2 />} /> 
+        <Route path='/deliaimg3' element={<DeliaImg3 />} />
+        <Route path='/deliaimg4' element={<DeliaImg4 />} />
+        <Route path='/deliaimg5' element={<DeliaImg5 />} />
+        <Route path='/deliaimg6' element={<DeliaImg6 />} />
+        <Route path='/deliaimg7' element={<DeliaImg7 />} />
+        <Route path='/deliaimg8' element={<DeliaImg8 />} />
+        <Route path='/deliaimg9' element={<DeliaImg9 />} />
+        <Route path='/velvetimg1' element={<VelvetImg1 />} />
+        <Route path='/velvetimg2' element={<VelvetImg2 />} />
+        <Route path='/velvetimg3' element={<VelvetImg3 />} />
+        <Route path='/velvetimg4' element={<VelvetImg4 />} />
+        <Route path='/velvetimg5' element={<VelvetImg5 />} />
+        <Route path='/velvetimg6' element={<VelvetImg6 />} />
+        <Route path='/velvetimg7' element={<VelvetImg7 />} />
+        <Route path='/velvetimg8' element={<VelvetImg8 />} />
+        <Route path='/velvetimg9' element={<VelvetImg9 />} />
+        <Route path='/velvetimg10' element={<VelvetImg10 />} />
+        <Route path='/velvetimg11' element={<VelvetImg11 />} />
+        <Route path='/velvetimg12' element={<VelvetImg12 />} />
+        <Route path='/velvetimg13' element={<VelvetImg13 />} />
+        <Route path='/velvetimg14' element={<VelvetImg14 />} />
+        <Route path='/velvetimg15' element={<VelvetImg15 />} />
+        <Route path='/velvetimg16' element={<VelvetImg16 />} />
+        <Route path='/velvetimg17' element={<VelvetImg17 />} />
+        <Route path='/velvetimg18' element={<VelvetImg18 />} />
+        <Route path='/velvetimg19' element={<VelvetImg19 />} />
+        <Route path='/velvetimg20' element={<VelvetImg20 />} />
+        <Route path='/velvetimg21' element={<VelvetImg21 />} />
+        <Route path='/velvetimg22' element={<VelvetImg22 />} />
+        <Route path='/velvetimg23' element={<VelvetImg23 />} />
+        <Route path='/velvetimg24' element={<VelvetImg24 />} />
+        <Route path='/velvetimg25' element={<VelvetImg25 />} />
+        <Route path='/velvetimg26' element={<VelvetImg26 />} />
+        <Route path='/velvetimg27' element={<VelvetImg27 />} />
+        <Route path='/velvetimg28' element={<VelvetImg28 />} />
+        <Route path='/velvetimg29' element={<VelvetImg29 />} />
+        <Route path='/unstitchedimg1' element={<UnstitchedImg1 />} />
+        <Route path='/unstitchedimg2' element={<UnstitchedImg2 />} />
+        <Route path='/unstitchedimg3' element={<UnstitchedImg3 />} />
+        <Route path='/unstitchedimg4' element={<UnstitchedImg4 />} />
+        <Route path='/unstitchedimg5' element={<UnstitchedImg5 />} />
+        <Route path='/unstitchedimg6' element={<UnstitchedImg6 />} />
+        <Route path='/unstitchedimg7' element={<UnstitchedImg7 />} />
+        <Route path='/unstitchedimg8' element={<UnstitchedImg8 />} />
+        <Route path='/unstitchedimg9' element={<UnstitchedImg9 />} />
+        <Route path='/unstitchedimg10' element={<UnstitchedImg10 />} />
+        <Route path='/unstitchedimg11' element={<UnstitchedImg11 />} />
+        <Route path='/unstitchedimg12' element={<UnstitchedImg12 />} />
+        <Route path='/unstitchedimg13' element={<UnstitchedImg13 />} />
+        <Route path='/unstitchedimg14' element={<UnstitchedImg14 />} />
+        <Route path='/unstitchedimg15' element={<UnstitchedImg15 />} />
+        <Route path='/unstitchedimg16' element={<UnstitchedImg16 />} />
+        <Route path='/unstitchedimg17' element={<UnstitchedImg17 />} />
+        <Route path='/unstitchedimg18' element={<UnstitchedImg18 />} />
+        <Route path='/unstitchedimg19' element={<UnstitchedImg19 />} />
+        <Route path='/unstitchedimg20' element={<UnstitchedImg20 />} />
+        <Route path='/unstitchedimg21' element={<UnstitchedImg21 />} />
+        <Route path='/unstitchedimg22' element={<UnstitchedImg22 />} />
+        <Route path='/unstitchedimg23' element={<UnstitchedImg23 />} />
+        <Route path='/unstitchedimg24' element={<UnstitchedImg24 />} />
+        <Route path='/unstitchedimg25' element={<UnstitchedImg25 />} />
+        <Route path='/unstitchedimg26' element={<UnstitchedImg26 />} />
+        <Route path='/unstitchedimg27' element={<UnstitchedImg27 />} />
+        <Route path='/unstitchedimg28' element={<UnstitchedImg28 />} />
+        <Route path='/unstitchedimg29' element={<UnstitchedImg29 />} />
+        <Route path='/unstitchedimg30' element={<UnstitchedImg30 />} />
+        <Route path='/unstitchedimg31' element={<UnstitchedImg31 />} />
+        <Route path='/unstitchedimg32' element={<UnstitchedImg32 />} />
+        <Route path='/unstitchedimg33' element={<UnstitchedImg33 />} />
+        <Route path='/unstitchedimg34' element={<UnstitchedImg34 />} />
+        <Route path='/unstitchedimg35' element={<UnstitchedImg35 />} />
+        <Route path='/unstitchedimg36' element={<UnstitchedImg36 />} />
+        <Route path='/unstitchedimg37' element={<UnstitchedImg37 />} />
+        <Route path='/unstitchedimg38' element={<UnstitchedImg38 />} />
+        <Route path='/unstitchedimg39' element={<UnstitchedImg39 />} />
+        <Route path='/unstitchedimg40' element={<UnstitchedImg40 />} />
+        <Route path='/unstitchedimg41' element={<UnstitchedImg41 />} />
+        <Route path='/unstitchedimg42' element={<UnstitchedImg42 />} />
+        <Route path='/unstitchedimg43' element={<UnstitchedImg43 />} />
+        <Route path='/unstitchedimg44' element={<UnstitchedImg44 />} />
+        <Route path='/unstitchedimg45' element={<UnstitchedImg45 />} />
+        <Route path='/unstitchedimg46' element={<UnstitchedImg46 />} />
+        <Route path='/unstitchedimg47' element={<UnstitchedImg47 />} />
+        <Route path='/unstitchedimg48' element={<UnstitchedImg48 />} />
+        <Route path='/readyimg1' element={<ReadyImg1 />} />
+        <Route path='/readyimg2' element={<ReadyImg2 />} />
+        <Route path='/readyimg3' element={<ReadyImg3 />} />
+        <Route path='/readyimg4' element={<ReadyImg4 />} />
+        <Route path='/readyimg5' element={<ReadyImg5 />} />
+        <Route path='/readyimg6' element={<ReadyImg6 />} />
+        <Route path='/readyimg7' element={<ReadyImg7 />} />
+        <Route path='/readyimg8' element={<ReadyImg8 />} />
+        <Route path='/readyimg9' element={<ReadyImg9 />} />
+        <Route path='/readyimg10' element={<ReadyImg10 />} />
+        <Route path='/readyimg11' element={<ReadyImg11 />} />
+        <Route path='/readyimg12' element={<ReadyImg12 />} />
+        <Route path='/readyimg13' element={<ReadyImg13 />} />
+        <Route path='/readyimg14' element={<ReadyImg14 />} />
+        <Route path='/readyimg15' element={<ReadyImg15 />} />
+        <Route path='/readyimg16' element={<ReadyImg16 />} />
+        <Route path='/readyimg17' element={<ReadyImg17 />} />
+        <Route path='/readyimg18' element={<ReadyImg18 />} />
+        <Route path='/readyimg19' element={<ReadyImg19 />} />
+        <Route path='/readyimg20' element={<ReadyImg20 />} />
+        <Route path='/readyimg21' element={<ReadyImg21 />} />
+        <Route path='/readyimg22' element={<ReadyImg22 />} />
+        <Route path='/readyimg23' element={<ReadyImg23 />} />
+        <Route path='/readyimg24' element={<ReadyImg24 />} />
+        <Route path='/readyimg25' element={<ReadyImg25 />} />
+        <Route path='/readyimg26' element={<ReadyImg26 />} />
+        <Route path='/readyimg27' element={<ReadyImg27 />} />
+        <Route path='/readyimg28' element={<ReadyImg28 />} />
+        <Route path='/readyimg29' element={<ReadyImg29 />} />
+        <Route path='/readyimg30' element={<ReadyImg30 />} />
+        <Route path='/readyimg31' element={<ReadyImg31 />} />
+        <Route path='/readyimg32' element={<ReadyImg32 />} />
+        <Route path='/readyimg33' element={<ReadyImg33 />} />
+        <Route path='/readyimg34' element={<ReadyImg34 />} />
+        <Route path='/readyimg35' element={<ReadyImg35 />} />
+        <Route path='/readyimg36' element={<ReadyImg36 />} />
+        <Route path='/readyimg37' element={<ReadyImg37 />} />
+        <Route path='/readyimg38' element={<ReadyImg38 />} />
+        <Route path='/readyimg39' element={<ReadyImg39 />} />
+        <Route path='/readyimg40' element={<ReadyImg40 />} />
+        <Route path='/readyimg41' element={<ReadyImg41 />} />
+        <Route path='/readyimg42' element={<ReadyImg42 />} />
+        <Route path='/readyimg43' element={<ReadyImg43 />} />
+        <Route path='/readyimg44' element={<ReadyImg44 />} />
+        <Route path='/formalimg1' element={<FormalImg1 />} />
+        <Route path='/formalimg2' element={<FormalImg2 />} />
+        <Route path='/formalimg3' element={<FormalImg3 />} />
+        <Route path='/formalimg4' element={<FormalImg4 />} />
+        <Route path='/formalimg5' element={<FormalImg5 />} />
+        <Route path='/formalimg6' element={<FormalImg6 />} />
+        <Route path='/formalimg7' element={<FormalImg7 />} />
+        <Route path='/formalimg8' element={<FormalImg8 />} />
+        <Route path='/formalimg9' element={<FormalImg9 />} />
+        <Route path='/formalimg10' element={<FormalImg10 />} />
+        <Route path='/formalimg11' element={<FormalImg11 />} />
+        <Route path='/formalimg12' element={<FormalImg12 />} />
+        <Route path='/formalimg13' element={<FormalImg13 />} />
+        <Route path='/formalimg14' element={<FormalImg14 />} />
+        <Route path='/formalimg15' element={<FormalImg15 />} />
+        <Route path='/formalimg16' element={<FormalImg16 />} />
+        <Route path='/formalimg17' element={<FormalImg17 />} />
+        <Route path='/formalimg18' element={<FormalImg18 />} />
+        <Route path='/formalimg19' element={<FormalImg19 />} />
+        <Route path='/formalimg20' element={<FormalImg20 />} />
+        <Route path='/formalimg21' element={<FormalImg21 />} />
+        <Route path='/formalimg22' element={<FormalImg22 />} />
+        <Route path='/formalimg23' element={<FormalImg23 />} />
+        <Route path='/formalimg24' element={<FormalImg24 />} />
+        <Route path='/formalimg25' element={<FormalImg25 />} />
+        <Route path='/formalimg26' element={<FormalImg26 />} />
+        <Route path='/formalimg27' element={<FormalImg27 />} />
+        <Route path='/formalimg28' element={<FormalImg28 />} />
+        <Route path='/formalimg29' element={<FormalImg29 />} />
+        <Route path='/formalimg30' element={<FormalImg30 />} />
+        <Route path='/formalimg31' element={<FormalImg31 />} />
+        <Route path='/formalimg32' element={<FormalImg32 />} />
+        <Route path='/formalimg33' element={<FormalImg33 />} />
+        <Route path='/formalimg34' element={<FormalImg34 />} />
+        <Route path='/formalimg35' element={<FormalImg35 />} />
+        <Route path='/formalimg36' element={<FormalImg36 />} />
+        <Route path='/formalimg37' element={<FormalImg37 />} />
+        <Route path='/formalimg38' element={<FormalImg38 />} />
+        <Route path='/formalimg39' element={<FormalImg39 />} />
+        <Route path='/formalimg40' element={<FormalImg40 />} />
+        <Route path='/formalimg41' element={<FormalImg41 />} />
+        <Route path='/formalimg42' element={<FormalImg42 />} />
+        <Route path='/formalimg43' element={<FormalImg43 />} />
+        <Route path='/formalimg44' element={<FormalImg44 />} />
+        <Route path='/formalimg45' element={<FormalImg45 />} />
+        <Route path='/formalimg46' element={<FormalImg46 />} />
+        <Route path='/formalimg47' element={<FormalImg47 />} />
+        <Route path='/formalimg48' element={<FormalImg48 />} />
+        <Route path='/saleimg1' element={<SaleImg1 />} />
+        <Route path='/saleimg2' element={<SaleImg2 />} />
+        <Route path='/saleimg3' element={<SaleImg3 />} />
+        <Route path='/saleimg4' element={<SaleImg4 />} />
+        <Route path='/saleimg5' element={<SaleImg5 />} />
+        <Route path='/saleimg6' element={<SaleImg6 />} />
+        <Route path='/saleimg7' element={<SaleImg7 />} />
+        <Route path='/saleimg8' element={<SaleImg8 />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
+export default App;
